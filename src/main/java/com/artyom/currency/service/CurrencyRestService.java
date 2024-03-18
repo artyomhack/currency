@@ -1,6 +1,5 @@
 package com.artyom.currency.service;
 
-import com.artyom.currency.CurrencyApp;
 import com.artyom.currency.dto.CreateCurrency;
 import com.artyom.currency.dto.CurrencyInfo;
 import com.artyom.currency.dto.UpdateCurrency;
@@ -12,11 +11,9 @@ public interface CurrencyRestService {
 
     void updateById(Integer id, UpdateCurrency currency);
 
-    CurrencyInfo getCurrencyById(Integer id);
+    CurrencyInfo fetchById(Integer id);
 
-    CurrencyInfo getCurrencyByCode(String code);
-
-    List<CurrencyInfo> getCurrencies();
+    List<CurrencyInfo> fetchAll();
 
     void deleteById(Integer id);
 }
