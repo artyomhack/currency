@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -23,22 +21,26 @@ public class Currency {
     private String code;
 
     @Setter
-    private BigDecimal price;
+    private String fullName;
+
+    @Setter
+    private String sign;
 
     @OneToMany
-    private List<ExchangeCurrency> historyExchanges;
+    public List<ExchangeCurrency> exchangeCurrencies;
 
     public Currency() {
     }
 
-    public Currency(Integer id, String code, BigDecimal price, List<ExchangeCurrency> historyExchanges) {
+    public Currency(Integer id, String code, String fullName, String sign, List<ExchangeCurrency> exchangeCurrencies) {
         this.id = id;
         this.code = code;
-        this.price = price;
-        this.historyExchanges = historyExchanges;
+        this.fullName = fullName;
+        this.sign = sign;
+        this.exchangeCurrencies = exchangeCurrencies;
     }
 
-    public static Currency newOf(String code, BigDecimal price) {
-        return new Currency(null, code, price, new ArrayList<>());
+    public static Currency newOf(String code, String fullName, String sign) {
+        return new Currency(null, code, fullName, sign, List.of());
     }
 }

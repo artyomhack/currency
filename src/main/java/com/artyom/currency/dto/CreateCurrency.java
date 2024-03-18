@@ -1,6 +1,17 @@
 package com.artyom.currency.dto;
 
-import java.math.BigDecimal;
+import lombok.Getter;
+import lombok.Setter;
 
-public record CreateCurrency(String code, BigDecimal price) {
+
+public record CreateCurrency(
+        @Setter
+        @Getter
+        String code,
+        @Setter
+        @Getter
+        String name,
+        @Setter
+        @Getter
+        String sign) {
 }
