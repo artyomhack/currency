@@ -13,6 +13,8 @@ public interface CurrencyRestService {
 
     CurrencyInfo fetchById(Integer id);
 
+    CurrencyInfo fetchByCode(String code);
+
     List<CurrencyInfo> fetchAll();
 
     void deleteById(Integer id);

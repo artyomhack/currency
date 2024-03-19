@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/CurrencyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/CurrencyRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CreateCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CreateCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CurrencyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CurrencyInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/UpdateCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/UpdateCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/repository/CurrencyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -62,6 +60,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -91,6 +93,30 @@
       <recent name="com.artyom.currency.dto" />
     </key>
   </component>
+  <component name="RunManager" selected="Spring Boot.CurrencyApp">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="CurrencyApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="currency.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.artyom.currency.CurrencyApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.artyom.currency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CurrencyApp" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,11 +125,52 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710657164014</updated>
-      <workItem from="1710657164945" duration="13701000" />
+      <workItem from="1710657164945" duration="32665000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit. First commit. Разработка rest приложения для просмотра валют.">
+      <option name="closed" value="true" />
+      <created>1710674530746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710674530746</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты.">
+      <option name="closed" value="true" />
+      <created>1710762235119</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710762235119</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты.">
+      <option name="closed" value="true" />
+      <created>1710762243282</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710762243282</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit. First commit. Разработка rest приложения для просмотра валют." />
+    <MESSAGE value="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты." />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты." />
   </component>
 </project>

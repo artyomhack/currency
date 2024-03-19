@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @Getter
 @Entity
-@Table(schema="money", name = "currency")
+@Table(schema = "money", name = "currency")
 public class Currency {
 
     @Id
