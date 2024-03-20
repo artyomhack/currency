@@ -1,4 +1,4 @@
-package com.artyom.currency.dto;
+package com.artyom.currency.dto.currency;
 
 import lombok.Getter;
 import lombok.Setter;

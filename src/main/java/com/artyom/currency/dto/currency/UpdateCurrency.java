@@ -1,8 +1,6 @@
-package com.artyom.currency.dto;
+package com.artyom.currency.dto.currency;
 
 import com.artyom.currency.entity.Currency;
-import lombok.Getter;
-import lombok.Setter;
 
 
 public record UpdateCurrency(

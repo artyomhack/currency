@@ -9,8 +9,8 @@ create table if not exists money.currency (
 
 create table if not exists money.exchange_currency(
     id serial primary key,
-    base_id int not null unique,
-    target_id int not null unique,
+    base_id int unique,
+    target_id int unique,
     rate decimal(6) not null,
 
     constraint exchange_currency_fk_baseId foreign key (base_id)

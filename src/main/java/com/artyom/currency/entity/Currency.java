@@ -1,5 +1,6 @@
 package com.artyom.currency.entity;
 
+import com.artyom.currency.dto.currency.CreateCurrency;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -40,7 +41,12 @@ public class Currency {
         this.exchangeCurrencies = exchangeCurrencies;
     }
 
-    public static Currency newOf(String code, String fullName, String sign) {
-        return new Currency(null, code, fullName, sign, List.of());
+    public static Currency newOf(CreateCurrency currency) {
+        return new Currency(
+                null,
+                currency.code(),
+                currency.name(),
+                currency.sign(),
+                List.of());
     }
 }

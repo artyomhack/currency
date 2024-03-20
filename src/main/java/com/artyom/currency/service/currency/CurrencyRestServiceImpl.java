@@ -1,8 +1,8 @@
-package com.artyom.currency.service;
+package com.artyom.currency.service.currency;
 
-import com.artyom.currency.dto.CreateCurrency;
-import com.artyom.currency.dto.CurrencyInfo;
-import com.artyom.currency.dto.UpdateCurrency;
+import com.artyom.currency.dto.currency.CreateCurrency;
+import com.artyom.currency.dto.currency.CurrencyInfo;
+import com.artyom.currency.dto.currency.UpdateCurrency;
 import com.artyom.currency.entity.Currency;
 import com.artyom.currency.repository.CurrencyRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +20,7 @@ public class CurrencyRestServiceImpl implements CurrencyRestService {
 
     @Override
     public CurrencyInfo create(CreateCurrency response) {
-        var currency = Currency.newOf(response.code(), response.name(), response.sign());
+        var currency = Currency.newOf(response);
         return CurrencyInfo.from(currencyRepository.save(currency));
     }
 

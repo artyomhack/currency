@@ -1,4 +1,4 @@
-package com.artyom.currency.dto;
+package com.artyom.currency.dto.currency;
 
 import com.artyom.currency.entity.Currency;
 
