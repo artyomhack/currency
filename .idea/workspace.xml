@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/exchangeCurrency/CreateExchangeCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/exchangeCurrency/CreateExchangeCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/ExchangeCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/ExchangeCurrency.java" afterDir="false" />
+    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="Commit. Пятый коммит. Изменил тип столбца rate в бд, добавил метод fetchByBaseAndTargetCurrencyCode(...), чтобы находить курс по коду валют">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/ExchangeCurrencyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/ExchangeCurrencyRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V1_0_basic_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V1_0_basic_schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710657164014</updated>
-      <workItem from="1710657164945" duration="44845000" />
+      <workItem from="1710657164945" duration="47349000" />
     </task>
     <task id="LOCAL-00001" summary="Commit. First commit. Разработка rest приложения для просмотра валют.">
       <option name="closed" value="true" />
@@ -169,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710925619031</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit. Пятый коммит. Изменил тип столбца rate в бд, добавил метод fetchByBaseAndTargetCurrencyCode(...), чтобы находить курс по коду валют">
+      <option name="closed" value="true" />
+      <created>1710993877686</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710993877686</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +196,7 @@
     <MESSAGE value="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты." />
     <MESSAGE value="Commit. Третий коммит." />
     <MESSAGE value="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal" />
+    <MESSAGE value="Commit. Пятый коммит. Изменил тип столбца rate в бд, добавил метод fetchByBaseAndTargetCurrencyCode(...), чтобы находить курс по коду валют" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit. Пятый коммит. Изменил тип столбца rate в бд, добавил метод fetchByBaseAndTargetCurrencyCode(...), чтобы находить курс по коду валют" />
   </component>
 </project>

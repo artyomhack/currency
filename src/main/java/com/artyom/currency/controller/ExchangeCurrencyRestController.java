@@ -14,11 +14,12 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/exchangeRates")
 public class ExchangeCurrencyRestController {
 
     private final ExchangeCurrencyRestService exchangeCurrencyRestService;
 
-    @GetMapping("/exchangeRates")
+    @GetMapping()
     public ResponseEntity<?> getExchangeCurrencies() {
         var list = exchangeCurrencyRestService.fetchAll();
 
@@ -33,7 +34,7 @@ public class ExchangeCurrencyRestController {
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
-    @PostMapping("/exchangeRates")
+    @PostMapping()
     public ResponseEntity<?> createExchangeCurrency(@RequestBody CreateExchangeCurrency response, UriComponentsBuilder componentsBuilder) {
         var exchangeCurrencyInfo = exchangeCurrencyRestService.create(response);
         return ResponseEntity.created(componentsBuilder
@@ -41,5 +42,13 @@ public class ExchangeCurrencyRestController {
                 .build()
                 .toUri()
         ).body(exchangeCurrencyInfo);
+    }
+
+    @GetMapping("/{baseAndTargetCode}")
+    public ResponseEntity<?> getExchangeCurrencyByBaseAndTargetCode(@PathVariable String baseAndTargetCode) {
+
+        var exchangeCurrencyInfo = exchangeCurrencyRestService.fetchByBaseAndTargetCurrencyCode(baseAndTargetCode);
+
+        return new ResponseEntity<>(exchangeCurrencyInfo, HttpStatus.OK);
     }
 }

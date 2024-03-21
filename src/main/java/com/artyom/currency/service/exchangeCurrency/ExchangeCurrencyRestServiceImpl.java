@@ -44,6 +44,7 @@ public class ExchangeCurrencyRestServiceImpl implements ExchangeCurrencyRestServ
 
     @Override
     public ExchangeCurrencyInfo fetchByBaseAndTargetCurrencyCode(String baseAndTargetCode) {
+
         if (baseAndTargetCode.isEmpty() || baseAndTargetCode.isBlank())
             throw new IllegalArgumentException("Коды валют пары отсутствуют в адресе - 400");
 
@@ -52,8 +53,8 @@ public class ExchangeCurrencyRestServiceImpl implements ExchangeCurrencyRestServ
 
         try {
             baseAndTargetCode = baseAndTargetCode.toUpperCase();
-            baseCurrencyCode = baseAndTargetCode.substring(0, 2);
-            targetCurrencyCode = baseAndTargetCode.substring(3, baseAndTargetCode.length() - 1);
+            baseCurrencyCode = baseAndTargetCode.substring(0, 3);
+            targetCurrencyCode = baseAndTargetCode.substring(3);
         } catch (Exception exception) {
             throw new IllegalArgumentException("База данных недоступна");
         }
