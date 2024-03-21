@@ -1,6 +1,7 @@
 package com.artyom.currency.entity;
 
 import com.artyom.currency.dto.exchangeCurrency.CreateExchangeCurrency;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;

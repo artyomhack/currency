@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты.">
+    <list default="true" id="cd4ac8e6-8473-41c1-ba75-26bd8c9ee621" name="Changes" comment="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/CurrencyRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/controller/CurrencyRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CreateCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CreateCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CurrencyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/CurrencyInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/UpdateCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/UpdateCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/repository/CurrencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/repository/CurrencyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/CurrencyRestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/exchangeCurrency/CreateExchangeCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/dto/exchangeCurrency/CreateExchangeCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/ExchangeCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/entity/ExchangeCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/artyom/currency/service/exchangeCurrency/ExchangeCurrencyRestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V1_0_basic_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V1_0_basic_schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +85,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.artyom.currency.dto.exchangeCurrency" />
+      <recent name="com.artyom.currency.service.exchangeCurrency" />
       <recent name="com.artyom.currency.service" />
       <recent name="com.artyom.currency.repository" />
       <recent name="com.artyom.currency.dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\__work\currency\src\main\java\com\artyom\currency\service\" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CurrencyApp">
@@ -125,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710657164014</updated>
-      <workItem from="1710657164945" duration="32665000" />
+      <workItem from="1710657164945" duration="44845000" />
     </task>
     <task id="LOCAL-00001" summary="Commit. First commit. Разработка rest приложения для просмотра валют.">
       <option name="closed" value="true" />
@@ -151,7 +153,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710762243282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit. Третий коммит.">
+      <option name="closed" value="true" />
+      <created>1710849446654</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710849446654</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal">
+      <option name="closed" value="true" />
+      <created>1710925619031</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710925619031</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit. First commit. Разработка rest приложения для просмотра валют." />
     <MESSAGE value="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit. Второй коммит. Начал реализовывать контроллер для создания валюты." />
+    <MESSAGE value="Commit. Третий коммит." />
+    <MESSAGE value="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit. Четвёртый коммит. Добавил список курсов валют, создание валюты, но в бд поле rate сохраняет целое значение, а Json возвращает в виде bigDecimal" />
   </component>
 </project>

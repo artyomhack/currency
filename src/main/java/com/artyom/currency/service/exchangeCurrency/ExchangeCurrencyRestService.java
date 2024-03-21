@@ -9,5 +9,6 @@ public interface ExchangeCurrencyRestService {
 
     ExchangeCurrencyInfo create(CreateExchangeCurrency response);
     List<ExchangeCurrencyInfo> fetchAll();
+    ExchangeCurrencyInfo fetchByBaseAndTargetCurrencyCode(String baseAndTargetCode);
 
 }

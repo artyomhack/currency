@@ -11,7 +11,7 @@ create table if not exists money.exchange_currency(
     id serial primary key,
     base_id int unique,
     target_id int unique,
-    rate decimal(6) not null,
+    rate decimal(19,4) not null,
 
     constraint exchange_currency_fk_baseId foreign key (base_id)
         references money.currency(id),

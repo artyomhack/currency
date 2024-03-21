@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public record CreateExchangeCurrency(
         CreateCurrency baseCurrency,
         CreateCurrency targetCurrency,
-        String rate
+        BigDecimal rate
 ) {
 
 }

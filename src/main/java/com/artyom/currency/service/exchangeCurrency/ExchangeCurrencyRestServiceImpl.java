@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 import java.util.stream.StreamSupport;
 
 @Service
@@ -29,7 +30,7 @@ public class ExchangeCurrencyRestServiceImpl implements ExchangeCurrencyRestServ
         var target = currencyRepository.findByCode(response.targetCurrency().code()).orElseThrow(() ->
                 new NoSuchElementException("Валюты " + response.targetCurrency().code() + " нет в базе данных"));
 
-        var entity = exchangeCurrencyRepository.save(ExchangeCurrency.newOf(base, target, new BigDecimal(response.rate())));
+        var entity = exchangeCurrencyRepository.save(ExchangeCurrency.newOf(base, target, response.rate()));
 
         return ExchangeCurrencyInfo.from(entity);
     }
@@ -39,5 +40,37 @@ public class ExchangeCurrencyRestServiceImpl implements ExchangeCurrencyRestServ
         return StreamSupport.stream(exchangeCurrencyRepository.findAll().spliterator(), false)
                 .map(ExchangeCurrencyInfo::from)
                 .toList();
+    }
+
+    @Override
+    public ExchangeCurrencyInfo fetchByBaseAndTargetCurrencyCode(String baseAndTargetCode) {
+        if (baseAndTargetCode.isEmpty() || baseAndTargetCode.isBlank())
+            throw new IllegalArgumentException("Коды валют пары отсутствуют в адресе - 400");
+
+        String baseCurrencyCode;
+        String targetCurrencyCode;
+
+        try {
+            baseAndTargetCode = baseAndTargetCode.toUpperCase();
+            baseCurrencyCode = baseAndTargetCode.substring(0, 2);
+            targetCurrencyCode = baseAndTargetCode.substring(3, baseAndTargetCode.length() - 1);
+        } catch (Exception exception) {
+            throw new IllegalArgumentException("База данных недоступна");
+        }
+
+
+        var entity = StreamSupport.stream(exchangeCurrencyRepository.findAll().spliterator(), false)
+                .toList()
+                .stream()
+                .filter(it -> {
+                    var base = it.getBaseId();
+                    var target = it.getTargetId();
+                    return Objects.equals(base.getCode(), baseCurrencyCode) &&
+                            Objects.equals(target.getCode(), targetCurrencyCode);
+                })
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Обменный курс для пары не найден - 404"));
+
+        return ExchangeCurrencyInfo.from(entity);
     }
 }
